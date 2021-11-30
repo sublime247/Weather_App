@@ -3,6 +3,7 @@ const card = document.querySelector('.card')
 const details= document.querySelector('.details')
 const icon =document.querySelector('.icon img')
 const Time = document.querySelector('.time')
+const search =document.querySelector('button')
 
 const updateUI =  (data)=>{
     const cityInfo = data.cityInfo
@@ -62,4 +63,16 @@ enterCity.addEventListener('submit', e=>{
             console.log(err)
         })
 
+})
+//search city for mobile
+search.addEventListener('click' , ()=>{
+    const city= enterCity.city.value.trim()
+    enterCity.reset()
+
+     updateCity(city)
+     .then((data)=>{
+          updateUI(data)
+     }).catch((err)=>{
+         console.log(err)
+     })
 })

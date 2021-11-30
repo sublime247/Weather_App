@@ -1,4 +1,4 @@
-const key =`9uc67S5BXCvZv4mGa7zkj7kaSlLxOAxB`
+const key =`IpZoiQFYWU6e8MWB5Rj6oW7Z8iANoOPM`
 //GET WEATHER CONDITION
 
 const getweather= async (id)=>{
@@ -9,12 +9,8 @@ const getweather= async (id)=>{
     const data = await weatherinfo.json();
 
     return data[0];
-    // console.log(data)
     
 };
-// console.log(data[0])
-
-
 
 //Get city
 const getcity = async(city)=>{
